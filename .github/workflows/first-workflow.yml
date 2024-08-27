@@ -11,3 +11,16 @@ jobs:
         run: |
           node -v
           npm -v
+  run-macos-commands:
+    runs-on: macos-latest
+    steps:
+      - name: "Parallel Job"
+        run: sw_vers
+
+  run-windows-commands:
+    needs: run-shell-commands
+    runs-on: windows-latest
+    steps:
+      - name: "Echo a String"
+        run: Write-Output "Hello World"
+
