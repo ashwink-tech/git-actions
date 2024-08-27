@@ -22,5 +22,5 @@ jobs:
     runs-on: windows-latest
     steps:
       - name: "Echo a String"
-        run: Write-Output "Hello Worlds"
+        run: Write-Output "Hello World"
 
