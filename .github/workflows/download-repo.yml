@@ -2,6 +2,15 @@ name: Download Repo on Runner Machine
 on: [push]
 
 jobs:
+  download_repo_actions:
+    runs-on: ubuntu-latest
+    steps:
+      - name: List Files before
+        run: ls -a
+        uses: actions/checkout@v3
+      - name: List Files After
+        run: ls -a
+
   download_repo:
     runs-on: ubuntu-latest
     steps:
