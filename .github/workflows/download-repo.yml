@@ -16,7 +16,7 @@ jobs:
     steps:
       - name: List files before
         run: ls -a
-      - name: Download Repos
+      - name: Download Repo
         run: |
           git init
           git remote add origin "https://$GITHUB_ACTOR:${{secrets.GITHUB_TOKEN}}@github.com/$GITHUB_REPOSITORY.git"
