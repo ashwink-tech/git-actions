@@ -1,5 +1,20 @@
 name: Workflow Dispatch Event
-on: workflow_dispatch
+on:
+  workflow_dispatch:
+    inputs:
+      string:
+        description: String Value
+        required: true
+        type: string
+      logLevel:
+        description: 'Log level'
+        required: true
+        default: 'warning'
+        type: choice
+        options:
+          - info
+          - warning
+          - debug
 
 jobs:
   manual_workflow_dispatch:
