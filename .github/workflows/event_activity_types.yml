@@ -1,0 +1,17 @@
+name: Event Activity Types
+on:
+  push:
+  pull_request:
+    types: [opened, reopened, synchronize, assigned]
+  issues:
+    types: [opened]
+
+jobs:
+  display_github_details:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Github Details
+        run: |
+          echo $GITHUB_SHA
+          echo $GITHUB_REF
+      - uses: actions/checkout@v3
