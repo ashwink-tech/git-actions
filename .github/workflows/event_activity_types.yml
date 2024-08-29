@@ -12,7 +12,7 @@ jobs:
   display_github_details:
     runs-on: ubuntu-latest
     steps:
-      - name: Github Details Display
+      - name: Github Details
         run: |
           echo $GITHUB_SHA
           echo $GITHUB_REF
