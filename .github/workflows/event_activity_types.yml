@@ -1,6 +1,8 @@
 name: Event Activity Types
 on:
   push:
+    branches:
+      - 'feature/*'
   pull_request:
     types: [opened, reopened, synchronize, assigned]
   issues:
