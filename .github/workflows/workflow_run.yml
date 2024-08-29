@@ -1,0 +1,14 @@
+name: Run Workflow based on another Workflow
+on:
+  workflow_run:
+    workflows: [Pull Request Target Event]
+    types:
+      - completed
+
+jobs:
+  echo_a_string:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Workflow run based on another workflow
+        run: echo "Workflow run because 'Pull Request Target Event' completed"
+
