@@ -1,0 +1,19 @@
+name: Pull Request Target Event
+on:
+  pull_request_target:
+    types: [opened]
+
+jobs:
+  add_a_comment_on_pr:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/github-script@v6
+      - name: Add a comment on PR
+        run: |
+          github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: '👋 Thanks for Contribution!'
+            })
+          
