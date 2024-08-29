@@ -21,3 +21,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo $GITHUB_REF
+      - run: echo "The String value is ${{inputs.string}}"
+      - run: echo "The log level is ${{inputs.logLevel}}"
